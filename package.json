@@ -1,0 +1,24 @@
+{
+  "name": "hub-de-leitura-test-ui",
+  "version": "1.0.0",
+  "description": "Testes em Cypress do curso Profissão: Engenheiro de Qualidade de Software da EBAC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francisco-bandeira/hub-de-leitura-test-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/francisco-bandeira/hub-de-leitura-test-ui/issues"
+  },
+  "homepage": "https://github.com/francisco-bandeira/hub-de-leitura-test-ui#readme",
+  "dependencies": {
+    "cypress": "^15.11.0"
+  }
+}
