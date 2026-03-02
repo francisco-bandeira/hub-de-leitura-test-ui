@@ -1,0 +1,20 @@
+{ 
+ "livros": [
+    {
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "categoria": "Ficção"
+    },
+    {
+      "titulo": "Cem Anos de Solidão",
+      "autor": "Gabriel García Márquez",
+      "categoria": "Realismo Mágico"
+    },
+    {
+      "titulo": "A Arte da Guerra",
+      "autor": "Sun Tzu",
+      "categoria": "Estratégia"
+    }
+  ]
+}
+ 

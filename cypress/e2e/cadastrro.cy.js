@@ -34,7 +34,7 @@ describe('Funcionalidade: Cadastro do Hub de Leitura', () => {
     cy.get('#user-name').should('contain', name)
   });
 
-  it.only('deve preencher cadastro com sucesso usando custom commands', () => {
+  it('deve preencher cadastro com sucesso usando custom commands', () => {
     let name = faker.person.fullName()
     let email = faker.internet.email()
     let telefone = faker.phone.number('###########')
