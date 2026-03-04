@@ -4,7 +4,9 @@
   "description": "Testes em Cypress do curso Profissão: Engenheiro de Qualidade de Software da EBAC",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --browser chrome",
+    "cy:open": "npx cypress open",
+    "cy:report": "npx cypress run --browser chrome --record --key 596415b3-23d5-484c-9cb1-664c26fc6776"
   },
   "repository": {
     "type": "git",
