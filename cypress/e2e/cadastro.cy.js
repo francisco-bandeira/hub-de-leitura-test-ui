@@ -1,9 +1,13 @@
 /// <reference types="cypress" />
 import { faker } from '@faker-js/faker';
+import CadastroPage from '../support/pages/cadastro-page';
+
 
 describe('Funcionalidade: Cadastro do Hub de Leitura', () => {
+  const cadastroPage = new CadastroPage();
+
   beforeEach(() => {
-    cy.visit('register.html')
+    cadastroPage.visitarPaginaCadastro()
   });
 
   it('Deve fazer o cadastro com sucesso, usando função js', () => {
@@ -44,4 +48,28 @@ describe('Funcionalidade: Cadastro do Hub de Leitura', () => {
     cy.get('#user-name').should('contain', name)
   });
 
+  it('deve fazer o cadastro com sucesso - Usando Page Objects', () => {
+    let name = faker.person.fullName()
+    let senha = faker.internet.password()
+    
+    cadastroPage.preencherFormularioCadastro(
+      name,
+      faker.internet.email(),
+      faker.phone.number('###########'),
+      senha,
+      senha
+    )
+    cy.url().should('include', 'dashboard.html')
+    cy.get('#user-name').should('contain', name).and('be.visible')
+  });
+  it.only('deve validar mensagem de erro ao tentar enviar formulário sem nome', () => {
+    cadastroPage.preencherFormularioCadastro(
+      '',
+      faker.internet.email(),
+      faker.phone.number('###########'),
+      'senha123',
+      'senha123'
+    )
+    cy.get('.invalid-feedback').should('contain', 'Nome deve ter pelo menos 2 caracteres').and('be.visible')
+  });
 });
